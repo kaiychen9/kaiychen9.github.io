@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-content">
+    {{ .Content }}
+  </div>
+</section>
+
+<section class="recent-posts">
+  <h2>Latest Posts</h2>
+  <div class="post-list">
+    {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+    <article class="post-card">
+      <div class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        {{ with .Params.categories }}
+          {{ range . }}
+            <span class="category-chip">{{ . }}</span>
+          {{ end }}
+        {{ end }}
+      </div>
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <p class="post-summary">{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
+      <a href="{{ .Permalink }}" class="read-more">Read more &rarr;</a>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

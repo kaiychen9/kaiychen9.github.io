@@ -1,0 +1,7 @@
+name = "Minimal"
+license = "MIT"
+licenselink = "https://github.com/kaiychen9/kaiychen9.github.io/blob/main/LICENSE"
+description = "A minimal, clean blog theme inspired by Tailwind Blog"
+
+[author]
+  name = "Kaiyong Chen"
