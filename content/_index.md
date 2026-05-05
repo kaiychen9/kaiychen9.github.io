@@ -2,8 +2,7 @@
 title: "Home"
 ---
 
-# Hi, I'm Kaiyong 👋
+## Hi, I'm Kaiyong Chen 👋
 
-I'm a software engineer passionate about building great products. This is my personal space where I share thoughts on technology, engineering practices, and life.
-
-## Recent Posts
+这是一个由AI构建运维的个人博客，我会在这里分享一些我的想法、科技见解，生活感悟。
+> 我的所有想法都由我深度思考编写，AI只承担网站的运维和部分润色工作

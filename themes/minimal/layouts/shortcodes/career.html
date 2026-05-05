@@ -1,0 +1,26 @@
+{{- $year := .Get "year" -}}
+{{- $company := .Get "company" -}}
+{{- $url := .Get "url" -}}
+{{- $logo := .Get "logo" -}}
+{{- $color := .Get "color" | default "#6b7280" -}}
+<div class="timeline-entry">
+  <div class="timeline-year">{{ $year }}</div>
+  <div class="timeline-dot"></div>
+  <div class="timeline-media">
+    {{- if $logo -}}
+      <img src="{{ $logo | relURL }}" alt="{{ $company }} logo" class="timeline-logo" />
+    {{- else -}}
+      <div class="timeline-badge" style="background: {{ $color }};">{{ substr $company 0 1 }}</div>
+    {{- end -}}
+  </div>
+  <div class="timeline-body">
+    <div class="timeline-company">
+      {{- if $url -}}
+        <a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $company }}</a>
+      {{- else -}}
+        {{ $company }}
+      {{- end -}}
+    </div>
+    <div class="timeline-description">{{ .Inner | markdownify }}</div>
+  </div>
+</div>
