@@ -7,6 +7,7 @@ theme = "minimal"
   author = "Kaiyong Chen"
   description = "Personal blog — thoughts, tech notes, and explorations."
   mainSections = ["posts"]
+  ga4Id = "G-VWTXRDF28Y"
 
 [menu]
   [[menu.main]]

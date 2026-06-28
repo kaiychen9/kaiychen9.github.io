@@ -9,6 +9,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- GA4 -->
+  {{ with .Site.Params.ga4Id }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ . }}');
+  </script>
+  {{ end }}
 </head>
 <body>
   {{ partial "header.html" . }}
@@ -37,5 +47,6 @@
       }
     });
   </script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
