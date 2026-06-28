@@ -1,6 +1,8 @@
 <footer class="footer">
   <div class="footer-inner">
-    <div class="footer-stats">
+    <p>
+      &copy; {{ now.Year }} 陈凯勇/Kaiyong Chen &mdash; All rights reserved.
+      <span class="separator">|</span>
       <span id="busuanzi_container_site_pv">
         <span id="busuanzi_value_site_pv">--</span> views
       </span>
@@ -8,11 +10,9 @@
       <span id="busuanzi_container_site_uv">
         <span id="busuanzi_value_site_uv">--</span> visitors
       </span>
-    </div>
-    <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.</p>
-    <p class="footer-links">
+      <span class="separator">|</span>
       <a href="https://github.com/kaiychen9" target="_blank" rel="noopener">GitHub</a>
-      <span class="separator">&middot;</span>
+      <span class="separator">|</span>
       <a href="{{ "index.xml" | relURL }}">RSS</a>
     </p>
   </div>
